@@ -1,0 +1,291 @@
+@@ -180,17 +180,16 @@
+ ibited.%0A
+-%0A
+ function
+@@ -259,22 +259,10 @@
+ nter
+-, hiResRender
+ )
++ 
+ %7B%0A  
+@@ -279,20 +279,16 @@
+ n 0.2.3%0A
+-    
+ %0A    var
+@@ -400,106 +400,8 @@
+ se;%0A
+-    %0A    var interval;%0A    var lastScreenX;%0A    var lastScreenY;%0A    var outOfWindow = false;%0A    
+ %0A   
+@@ -461,24 +461,8 @@
+ ra;%0A
+-    var threeD;%0A
+     
+@@ -491,28 +491,24 @@
+ rraycamera;%0A
+-    
+ %0A    //Store
+@@ -754,20 +754,16 @@
+ center;%0A
+-    
+ %0A    //Q
+@@ -812,20 +812,16 @@
+ mViews;%0A
+-    
+ %0A    //C
+@@ -876,20 +876,16 @@
+ artFar;%0A
+-    
+ %0A    //R
+@@ -976,301 +976,8 @@
+ ra;%0A
+-    %0A    //Looking Glass buttons%0A    var buttons, buttonsLastFrame, buttonsAvailable;%0A    var buttonNames = %5B %22square%22, %22left%22, %22right%22, %22circle%22 %5D;%0A    %0A    //A public bool to indicate if you want to use buttons - set to %22false%22 if not to save processing time%0A    this.useButtons = true;%0A    
+ %0A   
+@@ -1002,16 +1002,17 @@
+ ation = 
++'
+ %7B%22config
+@@ -1389,22 +1389,19 @@
+ e%22:0.0%7D%7D
++'
+ ;%0A
+-    
+ %0A    fun
+@@ -1416,17 +1416,19 @@
+ it()
++ %7B
+ %0A    
+-%7B%0A%09%09
++    
+ doLo
+@@ -1447,31 +1447,8 @@
+ e);%0A
+-        threeD = true;%0A
+     
+@@ -1482,90 +1482,9 @@
+   if
+-(hiResRender === undefined)%7B%0A            hiResRender = true;%0A        %7D%0A%0A        if
++ 
+ (foc
+@@ -1503,32 +1503,33 @@
+ r === undefined)
++ 
+ %7B%0A            va
+@@ -1939,18 +1939,20 @@
+ ctor3(0,
++ 
+ 0,
++ 
+ 0);%0A%0A   
+@@ -2208,32 +2208,33 @@
+ %0A%0A        %7D else
++ 
+ %7B%0A            if
+@@ -2233,16 +2233,17 @@
+       if
++ 
+ (focalPo
+@@ -2269,32 +2269,33 @@
+ f THREE.Vector3)
++ 
+ %7B%0A              
+@@ -2663,20 +2663,16 @@
+       %7D%0A
+-    
+ %0A       
+@@ -2674,16 +2674,17 @@
+       if
++ 
+ (constan
+@@ -3153,114 +3153,8 @@
+ ene%0A
+-        var renderResolution = 2048;%0A        tilesX = 4;%0A        tilesY = 8;%0A        if(hiResRender)%7B%0A    
+     
+@@ -3186,28 +3186,24 @@
+ 96;%0A        
+-  
+-  
+ tilesX = 5;%0A
+@@ -3206,28 +3206,24 @@
+  5;%0A        
+-   
+- 
+ tilesY = 9;%0A
+@@ -3222,34 +3222,16 @@
+ sY = 9;%0A
+-        %7D%0A        
+ %0A       
+@@ -3316,16 +3316,29 @@
+ ution, %7B
++%0A            
+ format: 
+@@ -3352,22 +3352,30 @@
+ GBFormat
++%0A        
+ %7D);%0A%0A
+- 
+         
+@@ -3517,24 +3517,16 @@
+ ra.far;%0A
+-        
+ %0A       
+@@ -3719,25 +3719,24 @@
+        for (
+- 
+ var y = 0; y
+@@ -3747,20 +3747,18 @@
+ ilesY; y
+- 
+ ++
+- 
+ ) %7B%0A    
+@@ -3767,14 +3767,15 @@
+     
++  
+ for (
+- 
+ var 
+@@ -3798,16 +3798,18 @@
+ X; x
+- 
+ ++
+- 
+ ) %7B%0A
++    
+     
+@@ -3867,32 +3867,36 @@
+ ();%0A            
++    
+ subcamera.viewpo
+@@ -3918,17 +3918,16 @@
+ Vector4(
+- 
+ x * rend
+@@ -3976,17 +3976,16 @@
+ derSizeY
+- 
+ );%0A     
+@@ -3987,24 +3987,28 @@
+             
++    
+ cameras.push
+@@ -4012,32 +4012,34 @@
+ ush(subcamera);%0A
++  
+           %7D%0A    
+@@ -4153,24 +4153,16 @@
+ iforms =
+-%0A       
+  %7B%0A     
+@@ -5642,3874 +5642,1881 @@
+ idth
+-/2, window.innerWidth/2, window.innerHeight/2, -window.innerHeight/2, 1, 3);%0A        finalRenderCamera.position.z = 2;%0A        finalRenderScene.add(finalRenderCamera);%0A        %0A        buttonsLastFrame = %5B false, false, false, false %5D;%0A%0A        //Add the user buttons%0A        setupFullScreen();%0A%09%09%0A    %7D;%0A%0A    //******HTML SETUP******//%0A%0A    //Create the dom element for the fullscreen button%0A    function makeFullScreenButton()%7B%0A        var newHTML =%0A            '%3Cinput type=%22button%22 style=%22margin:20px; position:fixed; top:0px; right:0px; z-index: 10000; height:50px; width:150px;%22 id=%22fullscreenButton%22 value=%22Enter Full Screen Mode%22/%3E';%0A%0A        var buttonDiv = document.createElement(%22div%22);%0A%0A        buttonDiv.innerHTML = newHTML;%0A%0A        buttonDiv.setAttribute(%22id%22, %22fullscreen%22);%0A%0A        document.body.appendChild(buttonDiv);%0A    %7D;%0A%0A    //Adding the functionality for the fullscreen button%0A    function setupFullScreen()%7B%0A        makeFullScreenButton();%0A%0A        document.getElementById('fullscreen').addEventListener(%22click%22, function()%7B%0A            if(_renderer.domElement.requestFullscreen) %7B%0A                _renderer.domElement.requestFullscreen();%0A            %7D else if(_renderer.domElement.mozRequestFullScreen) %7B%0A                _renderer.domElement.mozRequestFullScreen();%0A            %7D else if(_renderer.domElement.webkitRequestFullscreen) %7B%0A                _renderer.domElement.webkitRequestFullscreen();%0A            %7D else if(_renderer.msRequestFullscreen) %7B%0A                _renderer.domElement.msRequestFullscreen();%0A            %7D%0A        %7D);%0A    %7D;%0A%09%0A    //******CALIBRATION SETUP******//%0A    %0A%09function applyCalibration (calibration_obj)%0A%09%7B%0A        if(!calibration_obj)%7B%0A            jsonObj = defaultCalibration;%0A            alert(%22No Looking Glass display connected; using default calibration data. Please ensure your Looking Glass is connected to your computer via USB and reload the page.%22)%0A        %7D else %7B%0A            jsonObj = JSON.parse(calibration_obj);%0A        %7D%0A%09%09setShaderValues(jsonObj.DPI.value, jsonObj.pitch.value, jsonObj.slope.value, jsonObj.screenH.value, jsonObj.screenW.value, jsonObj.center.value, jsonObj.flipImageX.value, jsonObj.flipImageY.value);%0A%09%09viewCone = jsonObj.viewCone.value;%0A%09%7D%0A%09%0A%09function saveCalibration (calibration_obj)%0A%09%7B%0A%09%09console.log(%22Calibration in local storage overwritten.%22);%0A%09%09localStorage%5B'Config'%5D = calibration_obj;%0A    %7D%0A%09%0A%09function doLoadEEPROM (inInit)%0A%09%7B%0A        var OSName=%22Unknown OS%22;%0A        if (navigator.appVersion.indexOf(%22Win%22)!=-1) OSName=%22Windows%22;%0A        if (navigator.appVersion.indexOf(%22Mac%22)!=-1) OSName=%22MacOS%22;%0A        if (navigator.appVersion.indexOf(%22X11%22)!=-1) OSName=%22UNIX%22;%0A        if (navigator.appVersion.indexOf(%22Linux%22)!=-1) OSName=%22Linux%22;%0A        %0A%09%09var ws = new WebSocket('ws://localhost:11222/');%0A%09%09var finished = function () %7B%0A%09%09%09ws.close();%0A%09%09%7D;%0A%09%09var timeout = setTimeout(function () %7B %0A%09%09%09var errstr = %22Calibration not found in internal memory.%22;%0A            if (inInit) %7B%0A%09%09%09%09console.log(errstr); %0A%09%09%09%7D else %7B %0A%09%09%09%09alert(errstr);%0A%09%09%09%7D%0A            applyCalibration(null);%0A            initialized = true;%0A%09%09%09finished();%0A%09%09%7D, 800);%0A%09%09ws.onmessage = function(event) %7B%0A%09%09%09console.log(%22New calibration loaded from internal memory.%22);%0A%09%09%09saveCalibration(event.data);%0A%09%09%09applyCalibration(event.data);%0A%09%09%09clearTimeout(timeout);%0A            initialized = true;%0A%09%09%09finished();%0A%09%09%7D;%0A%09%09ws.onerror = function(event) %7B%0A%09%09%09if (confirm(%22Three.js driver not detected! Click OK to download. If you have already installed the driver, please make sure port 11222 is open.%22))%7B%0A%09%09%09%09window.location.href = %22http://look.glass/threejsdriver%22;%0A%09%09%09%7D%0A            applyCalibration(null);%0A            initialized = true;%0A%09%09%09finished();%0A%09%09%7D;%0A%09%7D%0A%0A    //*******SHADER SETUP******//%0A%0A    function setShaderValues(dpi, pitch, slope, screenH, screenW, center, flipX, flipY, invView)%0A   
++ / 2, window.innerWidth / 2, window.innerHeight / 2, -window.innerHeight / 2, 1, 3);%0A        finalRenderCamera.position.z = 2;%0A        finalRenderScene.add(finalRenderCamera);%0A%0A    %7D;%0A%0A    //******CALIBRATION SETUP******//%0A    function applyCalibration(calibration_obj) %7B%0A        if (calibration_obj === null) %7B%0A            calibration_obj = defaultCalibration;%0A        %7D%0A%0A        jsonObj = JSON.parse(calibration_obj);%0A%0A        setShaderValues(jsonObj.DPI.value, jsonObj.pitch.value, jsonObj.slope.value, jsonObj.screenH.value, jsonObj.screenW.value, jsonObj.center.value, jsonObj.flipImageX.value, jsonObj.flipImageY.value);%0A        viewCone = jsonObj.viewCone.value;%0A    %7D%0A%0A    function saveCalibration(calibration_obj) %7B%0A        console.log(%22Calibration in local storage overwritten.%22);%0A        localStorage%5B'Config'%5D = calibration_obj;%0A    %7D%0A%0A    function doLoadEEPROM(inInit) %7B%0A        var ws = new WebSocket('ws://localhost:11222/');%0A        var timeout = setTimeout(function() %7B%0A            var errstr = %22Calibration not found in internal memory.%22;%0A            if (inInit) %7B%0A                console.log(errstr);%0A            %7D else %7B%0A                alert(errstr);%0A            %7D%0A            applyCalibration(null);%0A            initialized = true;%0A            ws.close();%0A        %7D, 800);%0A        ws.onmessage = function(event) %7B%0A            console.log(%22New calibration loaded from internal memory.%22);%0A            saveCalibration(event.data);%0A            applyCalibration(event.data);%0A            clearTimeout(timeout);%0A            initialized = true;%0A            ws.close();%0A        %7D;%0A        ws.onerror = function(event) %7B%0A            applyCalibration(null);%0A            initialized = true;%0A            ws.close();%0A        %7D;%0A    %7D%0A%0A    //*******SHADER SETUP******//%0A    function setShaderValues(dpi, pitch, slope, screenH, screenW, center, flipX, flipY, invView)
+  %7B%0A 
+@@ -7926,16 +7926,17 @@
+       if
++ 
+ (flipX =
+@@ -8264,24 +8264,16 @@
+ center;%0A
+-        
+ %0A       
+@@ -8472,24 +8472,16 @@
+ ().top;%0A
+-        
+ %0A       
+@@ -9243,24 +9243,16 @@
+ creenY;%0A
+-        
+ %0A       
+@@ -9504,17 +9504,19 @@
+ alue = 1
+-/
++ / 
+ (screenW
+@@ -9742,17 +9742,16 @@
+ *****//%0A
+-%0A
+     //Re
+@@ -9815,20 +9815,16 @@
+  camera)
+-%0A   
+  %7B%0A     
+@@ -9942,33 +9942,35 @@
+ tart = -viewCone
+-/
++ / 
+ 2;%0A        var e
+@@ -9982,17 +9982,19 @@
+ viewCone
+-/
++ / 
+ 2;%0A     
+@@ -10169,120 +10169,103 @@
+ a);%0A
+-        %0A        for(var i = 0; i %3C numViews; i++)%0A        %7B%0A            var subcamera = arraycamera.cameras%5B i 
++%0A        for (var i = 0; i %3C numViews; i++) %7B%0A            var subcamera = arraycamera.cameras%5Bi
+ %5D;%0A 
+@@ -10444,17 +10444,19 @@
+ , end, i
+-/
++ / 
+ (numView
+@@ -11095,28 +11095,24 @@
+ ra);%0A    %7D;%0A
+-    
+ %0A    HoloPla
+@@ -11156,16 +11156,17 @@
+  camera)
++ 
+ %7B%0A      
+@@ -11169,16 +11169,17 @@
+       if
++ 
+ (target 
+@@ -11203,16 +11203,17 @@
+ Vector3)
++ 
+ %7B%0A      
+@@ -11275,32 +11275,33 @@
+ ;%0A            if
++ 
+ (camera === unde
+@@ -11298,32 +11298,33 @@
+ a === undefined)
++ 
+ %7B%0A              
+@@ -11396,148 +11396,140 @@
+ t);%0A
+-            %0A        %7D else if(target instanceof THREE.Object3D)%7B%0A            center = target.position;%0A            if(camera === undefined)
++%0A        %7D else if (target instanceof THREE.Object3D) %7B%0A            center = target.position;%0A            if (camera === undefined) 
+ %7B%0A  
+@@ -11615,32 +11615,33 @@
+ ;%0A        %7D else
++ 
+ %7B%0A            co
+@@ -11705,32 +11705,24 @@
+     %7D%0A    %7D%0A
+-        
+ %0A    //Rende
+@@ -11809,3537 +11809,987 @@
+ tion
+- (scene, camera, renderer)%7B%0A        if(!initialized)%0A            return;%0A        %0A        if(buttonsAvailable && scope.useButtons)%7B%0A            var gp = navigator.getGamepads();%0A            for (var i = 0; i %3C gp.length; i++) %7B%0A              if(gp%5Bi%5D != null && gp%5Bi%5D.id.indexOf(%22HoloPlay%22) %3E -1)%7B%0A                buttons = gp%5Bi%5D.buttons;%0A                break;%0A              %7D%0A            %7D%0A            %0A            for(var i = 0; i %3C buttons.length; i++)%7B%0A                if(buttonsLastFrame === undefined && !buttons%5Bi%5D.pressed)%7B%0A                    continue;%0A                %7D%0A                %0A                if(buttonsLastFrame === undefined && buttons%5Bi%5D.pressed)%7B%0A                    buttonDown.index = i;%0A                    buttonDown.name = buttonNames%5Bi%5D;%0A                    document.dispatchEvent(buttonDown);%0A                %7D else if(!buttonsLastFrame%5Bi%5D && buttons%5Bi%5D.pressed)%7B%0A                    buttonDown.index = i;%0A                    buttonDown.name = buttonNames%5Bi%5D;%0A                    document.dispatchEvent(buttonDown);%0A                %7D else if(buttonsLastFrame%5Bi%5D && buttons%5Bi%5D.pressed)%7B%0A                    buttonPressed.index = i;%0A                    buttonPressed.name = buttonNames%5Bi%5D;%0A                    document.dispatchEvent(buttonPressed);%0A                %7D else if(buttonsLastFrame%5Bi%5D && !buttons%5Bi%5D.pressed)%7B%0A                    buttonUp.index = i;%0A                    buttonUp.name = buttonNames%5Bi%5D;%0A                    document.dispatchEvent(buttonUp);%0A                %7D%0A            %0A                buttonsLastFrame%5Bi%5D = buttons%5Bi%5D.pressed;%0A            %7D%0A            %0A        %7D%0A        %0A        if(scene === undefined)%0A            scene = _scene;%0A        if(camera === undefined)%0A            camera = _camera;%0A        if(renderer === undefined)%0A            renderer = _renderer;%0A                %0A        if(!threeD)%7B%0A            if(camera.projectionMatrix.elements%5B8%5D != 0)%0A                camera.projectionMatrix.elements%5B8%5D = 0;%0A            renderer.setRenderTarget(null);%0A            renderer.render(scene, camera);%0A        %7D else%7B%0A            if(jsonObj == null)%7B%0A                alert(%22No calibration found! Please ensure that your Looking Glass is plugged in.%22);%0A                return;%0A            %7D%0A            %0A            if(outOfWindow)%7B%0A                if(lastScreenX != window.screenX %7C%7C lastScreenY != window.screenY)%7B%0A                    setShaderValues(jsonObj.DPI.value, jsonObj.pitch.value, jsonObj.slope.value, jsonObj.screenH.value, jsonObj.screenW.value, jsonObj.center.value, jsonObj.flipImageX.value, jsonObj.flipImageY.value, jsonObj.invView.value);%0A                %7D%0A                lastScreenX = window.screenX;%0A                lastScreenY = window.screenY;%0A            %7D%0A            %0A            var worldRight = new THREE.Vector3(1,0,0);%0A            camera.right = worldRight.applyQuaternion(camera.quaternion);%0A            if(holdCenter === false)%7B%0A                camera.getWorldDirection(cameraForward);%0A                cameraForward.multiplyScalar(viewScale);%0A%0A                center.addVectors(camera.position, cameraForward);%0A            %7D else%7B%0A                var dist = camera.position.distanceTo(center);%0A                camera.near = startNear * dist / viewScale;%0A                camera.far = startFar * dist / viewScale;%0A                camera.updateProjectionMatrix();%0A            %7D%0A%0A            captureViews(scene, camera);%0A%0A            renderer.setRenderTarget(null);%0A            renderer.render(finalRenderScene, finalRenderCamera);%0A        %7D
++(scene, camera, renderer) %7B%0A        if (!initialized)%0A            return;%0A%0A        if (scene === undefined)%0A            scene = _scene;%0A        if (camera === undefined)%0A            camera = _camera;%0A        if (renderer === undefined)%0A            renderer = _renderer;%0A%0A        var worldRight = new THREE.Vector3(1, 0, 0);%0A        camera.right = worldRight.applyQuaternion(camera.quaternion);%0A        if (holdCenter === false) %7B%0A            camera.getWorldDirection(cameraForward);%0A            cameraForward.multiplyScalar(viewScale);%0A            center.addVectors(camera.position, cameraForward);%0A        %7D else %7B%0A            var dist = camera.position.distanceTo(center);%0A            camera.near = startNear * dist / viewScale;%0A            camera.far = startFar * dist / viewScale;%0A            camera.updateProjectionMatrix();%0A        %7D%0A        captureViews(scene, camera);%0A        renderer.setRenderTarget(null);%0A        renderer.render(finalRenderScene, finalRenderCamera);%0A
+ %0A   
+@@ -12960,24 +12960,16 @@
+        %7D
+-%0A       
+  else if
+@@ -13055,1302 +13055,8 @@
+  %7D;%0A
+-    %0A    //Custom Looking Glass button events%0A    var buttonDown = new CustomEvent(%22buttonDown%22, %7Bbubbles: true, cancelable: false, name: %22none%22, index: -1%7D);%0A    var buttonPressed = new CustomEvent(%22buttonPressed%22, %7Bbubbles: true, cancelable: false, name: %22none%22, index: -1%7D);%0A    var buttonUp = new CustomEvent(%22buttonUp%22, %7Bbubbles: true, cancelable: false, name: %22none%22, index: -1%7D);%0A    %0A    addEvent(window, %22gamepadconnected%22, function(e) %7B%0A      var gp = navigator.getGamepads()%5Be.gamepad.index%5D;%0A      console.log(%22Gamepad connected at index %25d: %25s. %25d buttons, %25d axes.%22,%0A        gp.index, gp.id,%0A        gp.buttons.length, gp.axes.length);%0A      if(gp.id.indexOf(%22HoloPlay%22) %3E -1)%7B%0A          buttonsAvailable = true;%0A      %7D%0A    %7D);%0A    %0A    addEvent(document, %22mouseout%22, function(e) %7B%0A        e = e ? e : window.event;%0A        var from = e.relatedTarget %7C%7C e.toElement;%0A        if (!from %7C%7C from.nodeName == %22HTML%22) %7B%0A            if(!outOfWindow)%7B%0A                outOfWindow = true;%0A            %7D%0A        %7D%0A    %7D);%0A    %0A    addEvent(document, %22mouseover%22, function(e)%7B%0A       e = e ? e : window.event;%0A       var from = e.relatedTarget %7C%7C e.toElement;%0A       if(from != %22HTML%22)%7B%0A           if(outOfWindow)%7B%0A               outOfWindow = false;%0A           %7D   %0A        %7D%0A    %7D);%0A    
+ %0A   
+@@ -13162,16 +13162,17 @@
+ ction(e)
++ 
+ %7B%0A      
+@@ -13440,2552 +13440,2714 @@
+ %7D);%0A
+-    %0A    //Forward Slash for switching between 2D and 3D%0A    addEvent(document, %22keydown%22, function (e) %7B%0A        e = e ? e : window.event;%0A        if(e.keyCode === 220)%7B%0A            threeD = !threeD;%0A        %7D%0A    %7D);%0A%0A    //SHADER CODE%0A    var VertexShaderCode =%0A        %22varying vec2 iUv;%22+%0A%0A        %22void main() %7B%22+%0A            %22iUv = uv;%22+%0A            %22vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);%22+%0A            %22gl_Position = projectionMatrix * modelViewPosition;%22+%0A        %22%7D%22;%0A%0A    //Not all uniforms are used, some are intended for future features%0A    var FragmentShaderCode =%0A        %22uniform sampler2D quiltTexture;%22+%0A        %22uniform float pitch;%22+%0A        %22uniform float tilt;%22+%0A        %22uniform float center;%22+%0A        %22uniform float invView;%22 +%0A        %22uniform float flipX;%22 +%0A        %22uniform float flipY;%22 +%0A        %22uniform float subp;%22 +%0A        %22uniform float tilesX;%22+%0A        %22uniform float tilesY;%22+%0A        %22uniform float windowInnerW;%22+%0A        %22uniform float windowInnerH;%22+%0A        %22uniform float windowOuterW;%22+%0A        %22uniform float windowOuterH;%22+%0A        %22uniform float windowInnerX;%22+%0A        %22uniform float windowInnerY;%22+%0A        %22uniform float windowOuterX;%22+%0A        %22uniform float windowOuterY;%22+%0A        %22uniform float screenW;%22+%0A        %22uniform float screenH;%22+%0A        %22varying vec2 iUv;%22+%0A%0A        %22vec2 texArr(vec3 uvz) %7B%22+%0A            %22float z = floor(uvz.z * tilesX * tilesY);%22+%0A            %22float x = (mod(z, tilesX) + uvz.x) / tilesX;%22+%0A            %22float y = (floor(z / tilesX) + uvz.y) / tilesY;%22+%0A            %22return vec2(x, y);%22+%0A        %22%7D%22+%0A%0A        %22float Remap(float value, float from1, float to1, float from2, float to2)%7B%22+%0A           %22return (value - from1) / (to1 - from1) * (to2 - from2) + from2;%22+%0A        %22%7D%22+%0A%0A        %22void main()%22+%0A        %22%7B%22+%0A            %22vec4 rgb%5B3%5D;%22+%0A            %22vec3 nuv = vec3(iUv.xy, 0.0);%22+%0A%0A            //Flip UVs if necessary%0A            %22nuv.x = (1.0 - flipX) * nuv.x + flipX * (1.0 - nuv.x);%22+%0A            %22nuv.y = (1.0 - flipY) * nuv.y + flipY * (1.0 - nuv.y);%22+%0A%0A            %22for (int i = 0; i %3C 3; i++) %7B%22+%0A                %22nuv.z = (iUv.x + float(i) * subp + iUv.y * tilt) * pitch - center;%22+%0A                %22nuv.z = mod(nuv.z + ceil(abs(nuv.z)), 1.0);%22+%0A                %22nuv.z = (1.0 - invView) * nuv.z + invView * (1.0 - nuv.z);%22 +%0A                %22rgb%5Bi%5D = texture2D(quiltTexture, texArr(vec3(iUv.x, iUv.y, nuv.z)));%22+%0A            %22%7D%22+%0A%0A            %22gl_FragColor = vec4(rgb%5B0%5D.r, rgb%5B1%5D.g, rgb%5B2%5D.b, 1);%22+%0A        %22%7D%22%0A    
++%0A    addEvent(window, %22load%22, function(e) %7B%0A        setTimeout(function() %7B%0A            e = e ? e : window.event;%0A            setShaderValues(jsonObj.DPI.value, jsonObj.pitch.value, jsonObj.slope.value, jsonObj.screenH.value, jsonObj.screenW.value, jsonObj.center.value, jsonObj.flipImageX.value, jsonObj.flipImageY.value, jsonObj.invView.value);%0A            console.log('Page loaded, deploying a Safari fix.');%0A        %7D, 1000);%0A    %7D);%0A%0A    //SHADER CODE%0A    var VertexShaderCode =%0A        %22varying vec2 iUv;%22 +%0A%0A        %22void main() %7B%22 +%0A        %22iUv = uv;%22 +%0A        %22vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);%22 +%0A        %22gl_Position = projectionMatrix * modelViewPosition;%22 +%0A        %22%7D%22;%0A%0A    //Not all uniforms are used, some are intended for future features%0A    var FragmentShaderCode =%0A        %22uniform sampler2D quiltTexture;%22 +%0A        %22uniform float pitch;%22 +%0A        %22uniform float tilt;%22 +%0A        %22uniform float center;%22 +%0A        %22uniform float invView;%22 +%0A        %22uniform float flipX;%22 +%0A        %22uniform float flipY;%22 +%0A        %22uniform float subp;%22 +%0A        %22uniform float tilesX;%22 +%0A        %22uniform float tilesY;%22 +%0A        %22uniform float windowInnerW;%22 +%0A        %22uniform float windowInnerH;%22 +%0A        %22uniform float windowOuterW;%22 +%0A        %22uniform float windowOuterH;%22 +%0A        %22uniform float windowInnerX;%22 +%0A        %22uniform float windowInnerY;%22 +%0A        %22uniform float windowOuterX;%22 +%0A        %22uniform float windowOuterY;%22 +%0A        %22uniform float screenW;%22 +%0A        %22uniform float screenH;%22 +%0A        %22varying vec2 iUv;%22 +%0A%0A        %22vec2 texArr(vec3 uvz) %7B%22 +%0A        %22float z = floor(uvz.z * tilesX * tilesY);%22 +%0A        %22float x = (mod(z, tilesX) + uvz.x) / tilesX;%22 +%0A        %22float y = (floor(z / tilesX) + uvz.y) / tilesY;%22 +%0A        %22return vec2(x, y);%22 +%0A        %22%7D%22 +%0A%0A        %22float Remap(float value, float from1, float to1, float from2, float to2)%7B%22 +%0A        %22return (value - from1) / (to1 - from1) * (to2 - from2) + from2;%22 +%0A        %22%7D%22 +%0A%0A        %22void main()%22 +%0A        %22%7B%22 +%0A        %22vec4 rgb%5B3%5D;%22 +%0A        %22vec3 nuv = vec3(iUv.xy, 0.0);%22 +%0A%0A        //Flip UVs if necessary%0A        %22nuv.x = (1.0 - flipX) * nuv.x + flipX * (1.0 - nuv.x);%22 +%0A        %22nuv.y = (1.0 - flipY) * nuv.y + flipY * (1.0 - nuv.y);%22 +%0A%0A        %22for (int i = 0; i %3C 3; i++) %7B%22 +%0A        %22nuv.z = (iUv.x + float(i) * subp + iUv.y * tilt) * pitch - center;%22 +%0A        %22nuv.z = mod(nuv.z + ceil(abs(nuv.z)), 1.0);%22 +%0A        %22nuv.z = (1.0 - invView) * nuv.z + invView * (1.0 - nuv.z);%22 +%0A        %22rgb%5Bi%5D = texture2D(quiltTexture, texArr(vec3(iUv.x, iUv.y, nuv.z)));%22 +%0A        %22%7D%22 +%0A%0A        %22gl_FragColor = vec4(rgb%5B0%5D.r, rgb%5B1%5D.g, rgb%5B2%5D.b, 1);%22 +%0A        %22%7D%22
+ ;%0A%0A 
